@@ -116,7 +116,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>inc;C:\opencv\build\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include;C:\opencv\build\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,15 +143,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Camera.cpp" />
-    <ClCompile Include="src\Image.cpp" />
-    <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="src\Video.cpp" />
+    <ClCompile Include="source\Camera.cpp" />
+    <ClCompile Include="source\Image.cpp" />
+    <ClCompile Include="source\Main.cpp" />
+    <ClCompile Include="source\Video.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inc\Camera.h" />
-    <ClInclude Include="inc\Image.h" />
-    <ClInclude Include="inc\Video.h" />
+    <ClInclude Include="include\Camera.h" />
+    <ClInclude Include="include\Image.h" />
+    <ClInclude Include="include\Video.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,11 +4,11 @@
 class Video
 {
 private:
-	std::string _videopath;
+	std::string _videoname;
 	std::string _windowsname;
 
 public:
-	Video(std::string videopath, std::string windowsname);
+	Video(std::string videoname, std::string windowsname);
 	~Video();
 
 	void Play();

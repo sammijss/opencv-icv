@@ -1,9 +1,10 @@
 #include "Image.h"
+#include <filesystem>
 #include <opencv2/opencv.hpp>
 //using namespace cv;
 
-Image::Image(std::string imagepath, std::string windowsname) {
-	this->_imagepath = imagepath;
+Image::Image(std::string imagename, std::string windowsname) {
+	this->_imagename = imagename;
 	this->_windowsname = windowsname;
 }
 
@@ -12,8 +13,9 @@ Image::~Image() {
 }
 
 void Image::Load() {
+	std::string imagepath = std::filesystem::current_path().string() + "\\resource\\";
 	// Read the image file
-	cv::Mat image = cv::imread(this->_imagepath);
+	cv::Mat image = cv::imread(imagepath + this->_imagename);
 	if (image.empty()) { // Check for failure
 		std::cout << "Could not open or find the image" << std::endl;
 		return;

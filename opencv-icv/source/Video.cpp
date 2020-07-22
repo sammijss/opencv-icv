@@ -1,8 +1,9 @@
 #include "Video.h"
+#include <filesystem>
 #include <opencv2/opencv.hpp>
 
-Video::Video(std::string videopath, std::string windowsname) {
-	this->_videopath = videopath;
+Video::Video(std::string videoname, std::string windowsname) {
+	this->_videoname = videoname;
 	this->_windowsname = windowsname;
 }
 
@@ -11,9 +12,10 @@ Video::~Video() {
 }
 
 void Video::Play() {
+	std::string videopath = std::filesystem::current_path().string() + "\\resource\\";
 	cv::Mat frame;
 	cv::VideoCapture capture;
-	capture.open(this->_videopath);
+	capture.open(videopath + this->_videoname);
 	if (capture.isOpened()) {
 		double dWidth = capture.get(cv::CAP_PROP_FRAME_WIDTH); //get the width of frames of the video
 		double dHeight = capture.get(cv::CAP_PROP_FRAME_HEIGHT); //get the height of frames of the video

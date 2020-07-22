@@ -15,27 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inc\Image.h">
+    <ClInclude Include="include\Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\Camera.h">
+    <ClInclude Include="include\Image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\Video.h">
+    <ClInclude Include="include\Video.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Image.cpp">
+    <ClCompile Include="source\Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Camera.cpp">
+    <ClCompile Include="source\Image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Video.cpp">
+    <ClCompile Include="source\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Main.cpp">
+    <ClCompile Include="source\Video.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -3,11 +3,11 @@
 
 class Image {
 private:
-	std::string _imagepath;
+	std::string _imagename;
 	std::string _windowsname;
 
 public:
-	Image(std::string imagepath, std::string windowsname);
+	Image(std::string imagename, std::string windowsname);
 	~Image();
 	void Load();
 };

@@ -1,6 +1,9 @@
 #include "Camera.h"
+#include <filesystem>
+#include <opencv2/opencv.hpp>
 
-Camera::Camera(std::string windowsname) {
+Camera::Camera(std::string videoname, std::string windowsname) {
+	this->_videoname = videoname;
 	this->_windowsname = windowsname;
 }
 
@@ -52,7 +55,9 @@ void Camera::Record() {
 		std::cout << "Resolution of the video : " << dWidth << " x " << dHeight << std::endl;
 
 		cv::namedWindow(this->_windowsname, cv::WINDOW_KEEPRATIO);
-		cv::VideoWriter store("OpenCVRecording.mp4", cv::VideoWriter::fourcc('M', 'J', 'P', 'G'), 10, cv::Size((int)dWidth, (int)dHeight));
+
+		std::string videopath = std::filesystem::current_path().string() + "\\resource\\";
+		cv::VideoWriter store(videopath + this->_videoname, cv::VideoWriter::fourcc('M', 'J', 'P', 'G'), 10, cv::Size((int)dWidth, (int)dHeight));
 		while (true) {
 			capture >> frame;
 			if (frame.empty()) {

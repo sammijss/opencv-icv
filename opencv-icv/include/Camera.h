@@ -1,12 +1,13 @@
 #pragma once
-#include <opencv2/opencv.hpp>
+#include <string>
 
 class Camera {
 private:
+	std::string _videoname; //For recorded video name
 	std::string _windowsname;
 
 public:
-	Camera(std::string windowsname);
+	Camera(std::string videoname, std::string windowsname);
 	~Camera();
 
 	void Open();

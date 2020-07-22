@@ -1,6 +1,7 @@
 #include "Image.h"
 #include "Camera.h"
 #include "Video.h"
+#include <iostream>
 
 int main() {
 	char ch; /* char for option */
@@ -21,7 +22,7 @@ int main() {
 		case 'C':
 		{
 			/* CAMERA PROCESSING */
-			Camera cameraobj("OpenCV-Camera");
+			Camera cameraobj(nullptr, "OpenCV-Camera");
 			cameraobj.Open();
 		}
 		break;
@@ -29,7 +30,7 @@ int main() {
 		case 'R':
 		{
 			/* CAMERA PROCESSING */
-			Camera cameraobj("OpenCV-Recording");
+			Camera cameraobj("OpenCVRecording.mp4", "OpenCV-Recording");
 			cameraobj.Record();
 		}
 		break;
