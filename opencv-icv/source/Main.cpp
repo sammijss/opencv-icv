@@ -22,7 +22,7 @@ int main() {
 		case 'C':
 		{
 			/* CAMERA PROCESSING */
-			Camera cameraobj(nullptr, "OpenCV-Camera");
+			Camera cameraobj(std::string(), "OpenCV-Camera");
 			cameraobj.Open();
 		}
 		break;
